@@ -1,9 +1,12 @@
 <?php
 
-$bcode = $_GET['bcode'];
-$bcodes = Array();	
+$bcode 		= $_GET['BCODE'];
+$scanType 	= $_GET['SCAN_TYPE']
+$scanMeta 	= $_GET['SCAN_META']
+$scanRaw 	= $_GET['SCAN_RAW']
+$bcodes 	= Array();	
 array_push($bcodes,$bcode);
-$goScan = '"zxing://scan/?ret='.urlencode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?bcode={CODE}').'&SCAN_FORMATS=UPC_A,EAN_13"'
+$goScan 	= '"zxing://scan/?ret='.urlencode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?BCODE={CODE}&SCAN_TYPE={TYPE}&SCAN_META={META}&SCAN_RAW={RAWCODE}').'&SCAN_FORMATS={FORMAT}"'
 
 ?>
 
